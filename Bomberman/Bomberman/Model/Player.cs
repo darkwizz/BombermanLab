@@ -50,5 +50,11 @@ namespace Bomberman.Model
         {
             bonus.MakeEffectOnPlayer(this);
         }
+
+        public override void Destroy()
+        {
+            ResetBonuses();
+            base.Destroy();
+        }
     }
 }

@@ -30,7 +30,11 @@ namespace Bomberman.Model
         public void Explode()
         {
             Owner.BombsCurrentCount++;
-            BombExploded(this, new EventArgs());
+            EventHandler temp = BombExploded;
+            if (temp != null)
+            {
+                BombExploded(this, new EventArgs());
+            }
         }
 
         public override void Destroy()

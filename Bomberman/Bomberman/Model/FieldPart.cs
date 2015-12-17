@@ -21,7 +21,11 @@ namespace Bomberman.Model
             {
                 if (hasBlock && !value)
                 {
-                    BlockDestroyed(this, new EventArgs());
+                    EventHandler temp = BlockDestroyed;
+                    if (temp != null)
+                    {
+                        BlockDestroyed(this, new EventArgs());
+                    }
                 }
                 hasBlock = value;
             }
