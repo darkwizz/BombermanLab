@@ -69,6 +69,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Bomb.cs" />
+    <Compile Include="Model\BombsBonus.cs" />
+    <Compile Include="Model\Bonus.cs" />
+    <Compile Include="Model\BonusFactory.cs" />
+    <Compile Include="Model\DeseaseBonus.cs" />
+    <Compile Include="Model\FieldPart.cs" />
+    <Compile Include="Model\IncreaseFireBonus.cs" />
+    <Compile Include="Model\MapObject.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\SpeedBonus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
