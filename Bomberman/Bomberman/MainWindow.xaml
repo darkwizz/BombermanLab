@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bomberman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow"
+        Height="320"
+        Width="480"
+        SizeChanged="Window_SizeChanged">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill"
+                        ImageSource="Assets/background/wood.jpg" />
+        </Grid.Background>
+        <Grid x:Name="GameGridContainer"
+              Margin="20">
+            <Grid x:Name="GameMapGrid">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Assets/background/asphalt.jpg"
+                                Stretch="UniformToFill" />
+                </Grid.Background>
+            </Grid>
+            <Grid x:Name="GameForegroundGrid"
+                  Width="{Binding ElementName=GameMapGrid, Path=ActualWidth}"
+                  Height="{Binding ElementName=GameMapGrid,Path=ActualHeight}">
+                <Border BorderBrush="Black"
+                        BorderThickness="1"/>
+                <Canvas x:Name="GameForegroundCanvas" />
+            </Grid>
+            <Grid x:Name="GameGridOrient" />
+        </Grid>
     </Grid>
 </Window>

@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\MapObject\BrickBlock.cs" />
+    <Compile Include="Scenarios\Scenario.cs" />
+    <Compile Include="Scenarios\Test.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,16 +72,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Bomb.cs" />
-    <Compile Include="Model\BombsBonus.cs" />
-    <Compile Include="Model\Bonus.cs" />
-    <Compile Include="Model\BonusFactory.cs" />
-    <Compile Include="Model\DeseaseBonus.cs" />
-    <Compile Include="Model\FieldPart.cs" />
-    <Compile Include="Model\IncreaseFireBonus.cs" />
-    <Compile Include="Model\MapObject.cs" />
-    <Compile Include="Model\Player.cs" />
-    <Compile Include="Model\SpeedBonus.cs" />
+    <Compile Include="Model\MapObject\MapObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,6 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\background\asphalt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\background\wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\MapObject\NULL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\MapObject\Brick_Block.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
