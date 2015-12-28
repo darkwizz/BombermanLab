@@ -6,14 +6,21 @@
         xmlns:local="clr-namespace:Bomberman"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="320"
-        Width="480"
+        Height="640"
+        Width="960"
         SizeChanged="Window_SizeChanged">
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill"
                         ImageSource="Assets/background/wood.jpg" />
         </Grid.Background>
+        <MediaElement Visibility="Collapsed"
+                      Source="music/gimn.mp3" />
+        <MediaElement x:Name="MusicAA"
+                      Visibility="Collapsed"
+                      Source="music/AA1.mp3"
+                      LoadedBehavior="Manual"
+                      UnloadedBehavior="Stop" />
         <Grid x:Name="GameGridContainer"
               Margin="20">
             <Grid x:Name="GameMapGrid">

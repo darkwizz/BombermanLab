@@ -1,18 +1,7 @@
 ﻿using Bomberman.Scenarios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Bomberman
 {
@@ -21,13 +10,20 @@ namespace Bomberman
     /// </summary>
     public partial class MainWindow : Window
     {
-        IScenario scenario;
+        public static MediaElement MediaAA;
+
+        TestScenario scenario;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            MediaAA = MusicAA;
+
+            InitializeGameGrid(10, 10);
+
             scenario = new TestScenario(GameMapGrid, GameForegroundCanvas);
+            this.KeyUp += new KeyEventHandler(scenario.KeyUpAction);
             scenario.Execute();
         }
 

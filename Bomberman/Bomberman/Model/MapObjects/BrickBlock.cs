@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Bomberman.Model.MapObject
+namespace Bomberman.Model.MapObjects
 {
     public class BrickBlock : MapObject
     {
@@ -11,13 +11,14 @@ namespace Bomberman.Model.MapObject
         {
             SharedConstructor();
         }
-        public BrickBlock(Point position_i) : base(position_i)
+        public BrickBlock(IntPoint position_i) : base(position_i)
         {
             SharedConstructor();
         }
         private void SharedConstructor()
         {
-            ImageStock = new BitmapImage(new Uri("ms-appx:///Assets/MapObject/Brick_Block.png"));
+            ImageStock.Source = new BitmapImage(new Uri(ImageSources.BrickBlock));
+            ImageOnGrid.Source = ImageStock.Source;
         }
     }
 }
